@@ -1,0 +1,35 @@
+{
+  "name": "dsh-font-tuner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DeepSeek Harness 字体调节插件：整体缩放、仅文字放大、字重加粗，右下角浮动面板，设置保存在本机。",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "scripts": {
+    "test": "node dev/smoke.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

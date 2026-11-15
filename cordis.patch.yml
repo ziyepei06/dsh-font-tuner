@@ -1,0 +1,6 @@
+# dsh-font-tuner 的 profile patch 层：插入一条 Loader entry。
+# 浏览器半边由 dsh-client-modules 通过 package.json 的 dsh.client 声明发现，
+# 与随产品发布的 ui-* 包走同一条路径。
+- insert:
+    - id: font-tuner
+      name: 'dsh-font-tuner'
